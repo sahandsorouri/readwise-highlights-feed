@@ -1,43 +1,38 @@
+<img src="https://raw.githubusercontent.com/sahandsorouri/sahandsorouri/main/assets/banner.svg" alt="Sahand Sorouri" width="100%">
+
 # QuoteScroll
 
-> Scroll your own book highlights instead of doomscrolling.
+Scroll your own Readwise book highlights in a full-screen vertical feed, instead of doomscrolling.
 
-**Live:** [bookfeed.sorouri.com](https://bookfeed.sorouri.com)
+Live: [quotescroll.sorouri.com](https://quotescroll.sorouri.com)
 
-## The Problem
+## What it does
 
-We save hundreds of highlights in Readwise and never look at them again. The habit we do have is scrolling a vertical feed. So I built a feed of my own highlights.
+- Turns your Readwise highlights into a full-screen vertical feed: mouse wheel, keyboard (arrows, j, k) and touch.
+- Browse by book, search by keyword, and mark favorites.
+- Demo mode that works with no account.
+- Your token stays in your browser and highlights live in IndexedDB on your device; nothing is stored on the server.
+- A small server proxy talks to Readwise, so your token never goes to a third party.
 
-## What I Built
-
-A Next.js app that turns your Readwise highlights into a TikTok-style vertical feed. Connect your Readwise token, import your library, then scroll your highlights full-screen. Filter by book, search by keyword, mark favorites. There is a demo mode that works with no account.
-
-Privacy-first by design: your token stays in your browser, highlights live in IndexedDB on your device, nothing is stored server-side.
-
-## Key Features
-
-- Vertical full-screen feed: wheel, keyboard (arrows, j, k), and touch
-- Browse by book, search, and local favorites
-- Demo mode with no account needed
-- Server-side proxy so your token never hits a third party
-
-## Stack
-
-`Next.js 14` `TypeScript` `Tailwind CSS` `IndexedDB (idb)` `Vitest` `Playwright` `MSW` `Cloudflare Pages`
-
-## How to Run
+## Run
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Use Demo mode, or paste a Readwise token from [readwise.io/access_token](https://readwise.io/access_token).
+Open [http://localhost:3000](http://localhost:3000). Use demo mode, or paste a Readwise token from [readwise.io/access_token](https://readwise.io/access_token).
 
-## Status
+Tests: `pnpm test` (Vitest) and `pnpm test:e2e` (Playwright).
 
-Running in production at [bookfeed.sorouri.com](https://bookfeed.sorouri.com). Covered by unit tests (Vitest) and E2E tests (Playwright).
+Deploy to Cloudflare Pages with `pnpm pages:build`; see `DEPLOY_CLOUDFLARE.md`.
 
-## About
+## Tech
 
-Built by [Sahand Sorouri](https://github.com/sahandsorouri). Not affiliated with Readwise.
+Next.js 14, TypeScript, Tailwind CSS, IndexedDB (idb), Vitest, Playwright, MSW, Cloudflare Pages.
+
+Not affiliated with Readwise.
+
+---
+
+Built by [Sahand Sorouri](https://sahand.sorouri.com) · platforms, bots and AI tools for businesses in Dubai.
